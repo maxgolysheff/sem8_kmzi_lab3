@@ -62,9 +62,3 @@ work.each_slice((total_work.to_f / THREAD_NUMBER).ceil).with_index do |slice, in
 end
 
 Process.wait
-
-threads.each do |thread|
-  Process.kill('KILL', thread) 
-rescue Errno::ESRCH
-  nil
-end
