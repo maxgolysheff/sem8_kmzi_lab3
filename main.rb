@@ -15,7 +15,7 @@ end
 file_data = File.read('task3', binmode: true)
 
 PASSWORD = 'snqxs5Ko6wq48v89'.freeze
-PASSWORD_SIZE = 9.freeze
+PASSWORD_SIZE = 10.freeze
 
 SALT = file_data[0, 4].freeze
 ITERATIONS = file_data[7].unpack1('C').freeze
